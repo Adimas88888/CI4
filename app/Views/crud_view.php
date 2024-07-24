@@ -154,6 +154,7 @@
                             console.log('Delete success response:', response); 
                             Swal.fire('Deleted!', 'Your post has been deleted.', 'success');
                             fetchPosts(); 
+                        },
                         error: function(jqXHR, textStatus, errorThrown) {
                             console.error('AJAX error:', textStatus, errorThrown);
                         }
