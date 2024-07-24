@@ -64,7 +64,7 @@
                 url: '<?= site_url('crudcontroller/fetchAll') ?>',
                 method: 'GET',
                 success: function(data) {
-                    console.log('Data fetched:', data); // Debugging log
+                    console.log('Data fetched:', data); 
                     let posts = '';
                     data.forEach(post => {
                         posts += `<tr>
@@ -151,10 +151,9 @@
                         url: `<?= site_url('crudcontroller/delete/') ?>${id}`,
                         method: 'DELETE',
                         success: function(response) {
-                            console.log('Delete success response:', response); // Debugging log
+                            console.log('Delete success response:', response); 
                             Swal.fire('Deleted!', 'Your post has been deleted.', 'success');
-                            fetchPosts(); // Call fetchPosts() after delete
-                        },
+                            fetchPosts(); 
                         error: function(jqXHR, textStatus, errorThrown) {
                             console.error('AJAX error:', textStatus, errorThrown);
                         }
